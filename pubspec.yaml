@@ -36,7 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   # flutter_osm_plugin: ^0.34.1+5
   get: ^4.6.5
-  flutter_map: ^1.1.1
+  flutter_map: ^2.0.0
   latlong2: ^0.8.1
   location: ^4.4.0
   # flutter_map_location_marker: ^4.1.1

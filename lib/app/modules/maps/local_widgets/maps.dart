@@ -26,6 +26,7 @@ class Maps extends StatelessWidget {
                 urlTemplate:
                     "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 subdomains: ['a', 'b', 'c'],
+                userAgentPackageName: 'com.example.open_street_map',
               ),
               MarkerLayerOptions(
                 markers: [
@@ -45,23 +46,11 @@ class Maps extends StatelessWidget {
                   ),
                 ],
               ),
-              PolylineLayerOptions(
-                polylines: [
-                  Polyline(
-                    points: <LatLng>[
-                      LatLng(_.latitud, _.longitud),
-                      LatLng(_.direccion.latitud, _.direccion.longitud),
-                    ],
-                    color: Colors.green,
-                    strokeWidth: 3.0,
-                  )
-                ],
-              )
             ],
             nonRotatedChildren: [
               AttributionWidget.defaultWidget(
                 source: 'OpenStreetMap contributors',
-                onSourceTapped: null,
+                onSourceTapped: () {},
               ),
             ],
           ),
